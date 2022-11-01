@@ -11,14 +11,11 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="45" height="45" />
 
 
-[![Visit Live Site](https://img.shields.io/static/v1?label=%3CPagina%3E&message=%3CConstruccion%3E&color=%3CGREEN%3E)](https://grupo13.netlify.app/)
-
-
 <h1 align="center">
     LA TIERRA
 </h1>
-
-[![Banner](https://img.shields.io/badge/Mis%20Codigos-Construccion-orange)]()
+[![Visit Live Site](https://img.shields.io/static/v1?label=%3CPagina%3E&message=%3CFinalizado%3E&color=%3CGREEN%3E)](https://grupo13.netlify.app/)
+[![Banner](https://img.shields.io/badge/Mis%20Codigos-Finalizado-orange)]()
 
 ### Informacion del codigo contenido
 - Link a pagina grupo13()](grupo13.netlify.app](https://grupo13.netlify.app/#)
