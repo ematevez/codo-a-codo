@@ -18,7 +18,9 @@
 ### Informacion del codigo contenido
 - Link a pagina https://grupo13.netlify.app/#
 
-[Emanuel TEVEZ](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
 
-[<img src="https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png" width=50><br><sub>Emanuel TEVEZ</sub>](https://github.com/ematevez)
-![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
+
+
+
+![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)
+[Emanuel TEVEZ](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
