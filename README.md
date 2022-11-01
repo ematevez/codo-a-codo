@@ -19,9 +19,7 @@
 - Link a pagina https://grupo13.netlify.app/#
 
 
-
-
-
-![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)
 <hr><br>
+![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)
+<hr>
 [Emanuel TEVEZ](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
