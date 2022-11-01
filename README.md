@@ -20,5 +20,5 @@
 
 [Emanuel TEVEZ](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
 
-[<img src="https://user-images.githubusercontent.com/22551090/197237446-3fd10983-9768-45f2-b85b-53c600575aef.png" width=50><br><sub>Elías Galeano</sub>](https://github.com/ematevez)
+[<img src="https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png" width=50><br><sub>Emanuel TEVEZ</sub>](https://github.com/ematevez)
 ![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
