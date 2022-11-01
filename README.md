@@ -16,8 +16,7 @@
 </h1>
 
 ### Informacion del codigo contenido
-- Link a pagina grupo13()](grupo13.netlify.app](https://grupo13.netlify.app/#)
-- TODO: Reparar CSS y borrar tag no necesarias
+- Link a pagina https://grupo13.netlify.app/#
 
 
 ![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)
