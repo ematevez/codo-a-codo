@@ -14,8 +14,8 @@
 <h1 align="center">
     LA TIERRA
 </h1>
-[![Visit Live Site](https://img.shields.io/static/v1?label=%3CVisitar%3E&message=%3CPAGINA%3E&color=%3CGREEN%3E)](https://grupo13.netlify.app/)
-[![Banner](https://img.shields.io/badge/Mis%20Codigos-Finalizado-green)]()
+[![Visit Live Site](https://img.shields.io/static/v1?label=%3CVisitar%3E&message=%3CPAGINA%3E&color=%3CGREEN%3E)(https://grupo13.netlify.app/)
+[![Banner](https://img.shields.io/badge/Mis%20Codigos-Finalizado-green)
 
 ### Informacion del codigo contenido
 - Link a pagina grupo13()](grupo13.netlify.app](https://grupo13.netlify.app/#)
