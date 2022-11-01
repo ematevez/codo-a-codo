@@ -1,0 +1,1606 @@
+:root {
+  font-size: 16px;
+  font-family: 'Kumbh Sans', sans-serif;
+  --primary-text: rgba(172, 171, 171, 0.803);
+  --secondary-text: rgba(255, 255, 255, 0.747);
+  --primary-bg: rgba(0,0,0,);
+  --secondary-bg: rgba(255,255,255);
+} 
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+/*---------------------------INDEX---------------------------*/
+
+
+.panel1{
+  padding: 1rem;
+  background-image: url('/img/space1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titulo1{
+  padding: 18rem 0rem 0rem 0rem;
+  text-align: center;
+}
+
+.titulo_texto{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 7.5rem;
+  cursor: default;
+  filter: opacity(1);
+  transition: 500ms ease-in-out;
+}
+
+.titulo_texto:hover{
+  filter: opacity(0.8);
+  color: #ffffff;
+  font-size: 7.7rem;
+}
+
+.subtitulo1{
+  padding: 0rem 0rem 18rem 0rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.panel2{
+  padding: 1rem;
+  background-image: url('/img/stars.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.panel3{
+  padding: 1rem;
+  background-image: url('/img/agujeronegro2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.panel4{
+  padding: 1rem;
+  background-image: url('/img/asteroid.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*cambiar por la imagen se saca*/
+  background-color: black;
+  /*!Hacer que sea una sola imagen y cambiarla quedo feo*/
+  /*background-image: url('/img/planet.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;*/
+}
+
+body::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;   
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgba(145, 145, 145, 1);
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(145, 145, 145, 0.7);
+  border-radius: 1rem;
+}
+
+header {
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+  margin-left: 50px;
+}
+
+#navbar {
+  height: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.829);
+  position: sticky;
+  top: 0;
+}
+
+#navbar ul {
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+#navbar ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
+  border: none;
+}
+
+#navbar ul li a {
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  text-decoration: none;
+  color:rgb(109, 61, 254);
+  font-size: 16px;
+}
+
+#navbar ul li a:hover {
+  color: #ffffff; 
+  border-bottom: 1px solid #ffffff; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
+  transition: 800ms ease;
+}
+
+#navbar ul li a:active {
+  color: #090169;
+  border-bottom: 2px solid #090169;
+}
+
+
+/*-------------------------------*/
+.sidebar{
+  margin-top: 60px; /*la altura del header para que no se sobrelapens*/
+  padding-bottom: 5rem; /*debe ser igual que el de arriba, para que el icono de abajo de todo se vea*/
+  width: 7rem;
+  height: 100vh;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  transition: width 750ms ease;
+  z-index: 2;
+}
+
+.sidebar:hover{
+  width: 14rem;
+}
+
+.sidebar_list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.list_item{
+  width: 100%;
+}
+
+/*.list_item:last-child{
+  margin-top:auto;
+}
+*/
+
+.item_link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 7rem;  
+  color: var(--primary-text);
+  text-decoration: none;
+  filter: grayscale(90%) opacity(0.7);
+  transition: 500ms ease-out;
+}
+
+.item_link:hover{
+  filter: grayscale(0%) opacity(1);
+  background-color: rgba(255, 255, 255, 0.147);
+  color: var(--secondary-text);
+}
+
+.link_text{
+  opacity: 0;
+  margin: auto;
+  transition: opacity 750ms ease;
+}
+
+.sidebar:hover .link_text{
+  opacity: 1;
+}
+
+.link_img{
+  width: 5rem;
+  border-radius: 0%;
+  margin: 1rem; 
+  transition: transform 600ms ease;
+}
+
+.link_img:hover{
+  transform: rotate(360);
+  -webkit-transform: rotate(360deg);   /* webkit = Para que funciones en Chrome*/
+}
+
+/*----------------------------------*/
+
+
+header p {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+  border: none;
+  font-size: 2rem;
+  color: #aad1db;
+  text-align: left;
+}
+
+main{
+  /*overflow: auto;*/
+  margin: 60px 0rem 0rem 7rem;
+  z-index: 0;
+}
+
+
+footer{
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  height: 3rem;
+  margin-top: auto;
+  clear: both;
+  background-color: rgb(0, 0, 0); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_bar{
+  margin: 0;  /*se lo agrego porque o sino no me quedan centrado los iconos en el footer*/
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+} 
+
+.footer_bar_items{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer_bar_icons{
+  color: rgba(255, 255, 255, 0.704);
+  transition: 700ms ease;
+}
+
+.footer_bar_icons:hover{
+  color: rgb(90, 30, 218);
+}
+
+/* ---------------------------BOTON ARRIBA--------------------------- */
+
+.boton_arriba{
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  background-color: #090169;
+  bottom: 50px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2.5rem;
+  border-radius: 30%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.585);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.boton_arriba:hover{
+  background-color: #2b295dc5;
+  border-radius: 50%;
+}
+/* ---------------------------Página de formulario--------------------------- */
+
+.background_contacto{
+  background-image: url('/img/earth.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titulo_contacto{
+  text-align: center;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+}
+
+.form-title {
+  margin-top: 1em;
+}
+
+.form-title, .form-subtitle {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.form-subtitle {
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+
+.formu-col{
+  color:rgb(164, 142, 255);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto 2rem;
+  padding: 1em 2em;
+  background-color: #0f0f66ae;
+  border-radius: 16px;
+}
+
+fieldset {
+  border: none;
+  padding: 1rem 0;
+}
+
+label {
+  margin-top: 0.8rem;
+}
+
+input, textarea, select {
+  margin: 0.5rem 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+input, textarea {
+  border: 1px solid #05051b;
+  color: #ffffff;
+}
+
+textarea {
+  padding: 0.5rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+}
+
+input[type="submit"], input[type="reset"] {
+  display: inline-block;
+  width: 20%;
+  height: 2em;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  min-width: 100px;
+}
+
+
+/*---------------------------Página de about---------------------------*/
+
+.titulos_about{
+  text-align: left;
+  padding: 1rem 1rem 1rem 1rem;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+}
+
+.parrafos_about{
+  padding: 1rem 1rem 1rem 1rem; 
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  text-shadow: 2px 2px 8px black;
+}
+
+.parrafos_about ul{
+  display: flex;
+}
+
+.parrafos_about ul li{
+  margin-right: 60px;
+}
+
+.aboutbackground{
+  background-image: url('/img/skystar2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+}
+
+.blurbackground1{
+  margin: 0 50px 50px 50px;
+  background-color: #0000003a;
+  border-radius: 40px;
+}
+
+.blurbackground2{
+  margin: 0 50px 50px 50px;
+  background-color: #0000003a;
+  border-radius: 40px;
+}
+
+.blurbackground3{
+  margin: 0 50px 0 50px;
+  background-color: #0000003a;
+  border-radius: 40px;
+}
+
+/*---------------------------Página de FAQ---------------------------*/
+
+.background_faq{
+  background-image: url('/img/agujeronegro.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 170px 0 170px 0;
+}
+
+.container_faq{
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.accordion_item{
+  background-color: #232323;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+  transition: 500ms ease-in-out;
+}
+
+.accordion_item:hover{
+  scale: 103%;
+}
+
+.accordion_link{
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #232323;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.accordion_link:hover{
+  color: #ffffff;
+}
+
+/*icono*/
+.accordion_link i{
+  color:rgb(255, 255, 255);
+  padding: 0.5rem;
+}
+
+.accordion_link .ion-md-remove{
+  display: none;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #000000;
+  transition: max-height 750ms ease-in-out;
+}
+
+.answer::before{
+  content: "";
+  position: absolute;
+  width: 0.6rem;
+  height: 90%;
+  background-color: #ffffff;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p{
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.719);
+  padding: 2rem;
+}
+
+.accordion_item:target .answer{
+  max-height: 20rem;
+}
+
+
+
+
+
+/* ----------------------------Página 404--------------------------------- */
+
+#agujero-negro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  height: 100vh;
+  margin: 0 auto;
+  width: 80%;
+  background-image: url('/img/astronauta.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+#texto_agujero-negro{
+  text-align: center;
+  text-shadow: 2px 2px 8px black;
+}
+
+#volver-a-inicio {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #090169;
+  color: #ffffff;
+  transition: 500ms ease-in-out;
+}
+
+#volver-a-inicio:hover {
+  scale: 110%;
+  color: #090169;
+  background-color: #ffffff;
+}
+
+
+#volver-a-inicio:active {
+  filter: opacity(50%);
+  font-weight: 700;
+}
+
+/* --------------------Página de recomendados---------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.recomendado_tarjeta{
+  width: 30%;
+  height: 25vw;
+  margin: 5px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta:hover{
+  scale: 103%;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+  border-radius: 5px;
+}
+
+.texto_tarjeta{
+  padding-right: 10px ;
+  padding-left: 10px;
+  padding-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+.tema{
+  text-align: center;
+  margin: 0 auto 0 0;
+  padding: 0 5px 0 5px;
+  font-size: 1vw;  
+  letter-spacing: 4px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  text-decoration: none;
+}
+
+.tema a{
+  text-decoration: none;
+  color: #ffffff;
+  transition: 200ms ease-in-out;
+}
+
+.tema a:hover{
+  font-weight: 1000;
+}
+
+.titulo{
+  margin-top: 1%;
+  font-weight: 800;
+  font-size: 1.5vw;
+  text-decoration: none;
+}
+
+.titulo a{
+  text-decoration: none;
+  color: #ffffff;
+  transition: 200ms ease-in-out;
+}
+
+.titulo a:hover{
+  filter: opacity(75%);
+}
+
+@media only screen and (max-width:360px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 146px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  #navbar ul li a {
+    font-size: 15px;
+  }
+  
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 2.4rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 150px 0 0 0;
+}
+
+.recomendado_tarjeta{
+  width: 80%;
+  height: 70vw;
+  margin: 5px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 7.5px ;
+  padding-left: 7.5px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 3vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 2.5%;
+  font-weight: 700;
+  font-size: 4vw;
+}
+
+#agujero-negro {
+  background-size: 100%;
+  gap: 1.5rem;
+}
+#texto_agujero-negro{
+  font-size: 20px;
+}
+
+#volver-a-inicio {
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+}
+@media only screen and (min-width:360px) and (max-width:432px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 102px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  #navbar ul li a{
+    font-size: 12px;
+  }
+  
+
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 3.5rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 150px 0 0 0;
+}
+
+.recomendado_tarjeta{
+  width: 45%;
+  height: 50vw;
+  margin: 5px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 7.5px ;
+  padding-left: 7.5px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 2vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 2%;
+  font-weight: 700;
+  font-size: 2.7vw;
+}
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 98%;
+  padding: 114px 0 0 0;
+}
+
+.recomendado_tarjeta{
+  width: 48%;
+  height: 45vw;
+  margin: 3px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 7.5px ;
+  padding-left: 7.5px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 2vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 3%;
+  font-weight: 700;
+  font-size: 2.7vw;
+}
+
+#agujero-negro {
+  background-size: 90%;
+}
+#texto_agujero-negro{
+  font-size: 24px;
+}
+
+#volver-a-inicio {
+  padding: 0.7rem;
+  border-radius: 8px;
+}
+
+}
+@media only screen and (min-width:432px) and (max-width:743px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 104px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 3.5rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 100px 0 0 0;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 10px ;
+  padding-left: 10px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 1vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 2.5%;
+  font-weight: 700;
+  font-size: 1.5vw;
+}
+
+
+
+#agujero-negro {
+  background-size: 75%;
+}
+#texto_agujero-negro{
+  font-size: 32px;
+}
+
+
+}
+@media only screen and (min-width:743px) and (max-width:877px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 3.5rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+/* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 100px 0 0 0;
+}
+
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 1vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 1%;
+  font-size: 1.55vw;
+}
+
+}
+@media only screen and (min-width:877px) and (max-width:912px){
+
+
+  
+
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 5.7rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 5.9rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+}
