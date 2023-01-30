@@ -19,6 +19,7 @@
 - Link a pagina https://grupo13.netlify.app/#
 
 <hr><br>
+Practico realizado con consumo de api para curso de FullStack con Python
 
 ![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)
 <br>
